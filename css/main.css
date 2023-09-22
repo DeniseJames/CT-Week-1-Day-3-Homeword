@@ -1,0 +1,239 @@
+/* Universal Selector - remove any margin that the browser has by default */
+* {
+    margin: 0;
+}
+
+body {
+    background-color: whitesmoke;
+    color: black;
+}
+.container {  
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 10vw repeat(8, 0.5fr) 1fr;
+    grid-template-rows: 5vh 0.5fr 0.5fr 10vh .07fr 5vh .07fr 5vh .07fr 5vh .07fr 5vh 0.fr;
+    gap: 0;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav nav nav nav nav nav nav nav nav nav"
+      "feature feature feature feature feature feature feature feature feature feature"
+      "feature feature feature feature feature feature feature feature feature feature"
+      ". . gray-april gray-april gray-april gray-april gray-april gray-april . ."
+      ". . card card card card card card . ."
+      ". . line line line line line line  . ."
+      ". . card2 card2 card2 card2 card2 card2 . ."
+      ". . line2 line2 line2 line2 line2 line2 . ."
+      ". . card3 card3 card3 card3 card3 card3 . ."
+      ". . line3 line3 line3 line3 line3 line3 . ."
+      ". . card4 card4 card4 card4 card4 card4 . ."
+      ". . line4 line4 line4 line4 line4 line4 . ."
+      "  card5 card5 card5 card5 card5 card5 card5 card5 card5 card5"
+ 
+      ;
+}
+.bey{
+    grid-area: bey;
+    background-color: black;
+    color: whitesmoke;
+}
+.info{
+    grid-area: info;
+    background-color: black;
+    color: whitesmoke;
+}
+.shows{
+    grid-area: shows;
+    background-color: black;
+    color: whitesmoke;
+}
+.social{
+    grid-area: social;
+    background-color: black;
+    color: whitesmoke;
+}
+.nav { grid-area: nav; }
+
+.feature { 
+    align-self: center;
+    grid-area: feature;
+ }
+
+.img-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+    
+    #prof-img2, #prof-img2-2, #prof-img2-3, #prof-img2-4{
+        max-width: 100%;
+        height: auto;
+    }
+
+    #prof-img3, #prof-img3-2, #prof-img3-3, #prof-img3-4{
+        max-width: 100%;
+        height: auto;
+    }
+
+
+.gray-april { 
+    grid-area: gray-april;
+    background-color: lightgrey;
+    text-align: left;
+    color: black;
+    margin-top: 20px;  /* add top margin */
+    margin-bottom: 20px;  /* add bottom margin */
+    width: 100%; 
+    padding-left: 10vh;
+}
+
+
+  
+
+  .theater {
+    font: 1em sans-serif;
+    color: white;
+    display: flex;
+    align-self: center;
+    flex: 1; 
+}
+.nav {
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    max-height: 100;
+}
+
+.nav-links{
+    display: flex;
+    font: .5em sans-serif;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: right;
+    flex: 2; /* Allow the element to grow and take available space */
+}
+
+.nav-links > a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links > a:hover {
+    font-size: larger;
+    background-color: #212121;
+    color: #e6e6e6;
+    text-decoration: underline;
+}
+
+.card { 
+        grid-area: card;
+        display: flex;
+
+        justify-content: center;
+        width: 100%;
+      }
+
+      .card2 { 
+        grid-area: card2;
+        display: flex;
+ 
+        justify-content: center;
+        width: 100%;
+      }
+      .card3 { 
+        grid-area: card3;
+        display: flex;
+
+        justify-content: center;
+        width: 100%;
+      }
+      .card4 { 
+        grid-area: card4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .card5 { 
+        grid-area: card5;
+        grid-template-columns: .03fr .12fr; /* 1/4 and 3/4 split */
+        background-color: black;
+        display: flex;       
+        align-items: stretch; /* make sure grid items stretch vertically to fill the space */
+
+      }
+
+      
+#button1, #button2, #button3, #button4 {
+    background-color: goldenrod;
+    color: #fff;
+    justify-self: end;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.read-more, .read-more2, .read-more3, .read-more4 {
+    justify-self: end; /* aligns the item to the end of its grid area */
+  }
+  
+
+.img-container2, .img-container2-2,.img-container2-3,.img-container2-4 {
+    margin-right: 20px;  }
+
+.img-container3, .img-container3-2, .img-container3-3, .img-container3-4{
+    margin-left: 20px;
+}
+  
+  .line {
+    grid-area: line;
+    background-color: lightgrey;  /* Color of the line */
+    height: 1px;  /* Thickness of the line */
+    width: 100%;  /* Make it span the full width of the grid area */
+    justify-content: center;
+  }
+  
+  .line2 {
+    grid-area: line2;
+    background-color: lightgrey;  /* Color of the line */
+    height: 1px;  /* Thickness of the line */
+    width: 100%;  /* Make it span the full width of the grid area */
+    justify-content: center;
+  }
+  .line3 {
+    grid-area: line3;
+    background-color: lightgrey;  /* Color of the line */
+    height: 1px;  /* Thickness of the line */
+    width: 100%;  /* Make it span the full width of the grid area */
+    justify-content: center;
+  }
+  .line4 {
+    grid-area: line4;
+    background-color: lightgrey;  /* Color of the line */
+    height: 1px;  /* Thickness of the line */
+    width: 100%;  /* Make it span the full width of the grid area */
+    justify-content: center;
+  }
+  
+ 
+  .img-container-a img, .img-container-b img {
+    width: 100%;
+    height: 100%; 
+    object-fit: contain;
+    
+}
+
+
+  .prof-a{
+
+
+  }
+
+  .prof-b{
+    
+  }
